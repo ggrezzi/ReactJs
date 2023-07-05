@@ -25,7 +25,7 @@ const Item = ({id, name, img, price, stock})=>{
                 </div>
 
                 <div class="content">
-                    <Link to={'/item/$'+{id}} className="option" class="button is-primary">Ver detalle</Link>
+                    <Link to={`/item/${id}`} className="option" class="button is-primary">Ver detalle</Link>
                 </div>
             </div>
         </div>
