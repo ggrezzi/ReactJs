@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 
-const Item = ({id, nombre, foto, precio, stock})=>{
+const Item = ({id, name, img, price, stock})=>{
     return (
 
         <div className="contenedor">
@@ -9,7 +9,7 @@ const Item = ({id, nombre, foto, precio, stock})=>{
                 <div class="card equal-height">
                     <div class="card-image has-text-centered">
                         <figure class="image is-64x64 is-inline-block">
-                            <img src={foto} alt={nombre} />
+                            <img src={img} alt={name} />
                         </figure>
                     </div>
                     <div class="card-content">
@@ -17,8 +17,8 @@ const Item = ({id, nombre, foto, precio, stock})=>{
                             <div class="media-left">
                             </div>
                             <div class="media-content">
-                                <p class="title is-4">{nombre}</p>
-                                <p class="subtitle is-6">Precio: ${precio}</p>
+                                <p class="title is-4">{name}</p>
+                                <p class="subtitle is-6">Precio: ${price}</p>
                                 <p class="subtitle is-6">Stock Disponible: {stock}</p>
                             </div>
                         </div>
