@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 const CheckoutForm = ({onConfirm})=>{
     const [name, setName] = useState('')
@@ -11,8 +13,13 @@ const CheckoutForm = ({onConfirm})=>{
 
         event.preventDefault()
         if (emailVerification!==email){
-            console.error('Verifica que el email y el email de confirmacion sean el mismo')
-            //SetError("error en validacion de emails")
+        const MySwal = withReactContent(Swal)
+
+            MySwal.fire({
+            title: <strong>Error en la validacion del email</strong>,
+            html: <i>El mail ingresado no coincide con la validacion!</i>,
+            icon: 'success'
+            })
         }
         else{const userData = {
             name, phone, email
